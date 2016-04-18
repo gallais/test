@@ -1,7 +1,13 @@
 language: haskell
+ghc: 7.8
 sudo: false
+cache:
+  - $HOME/.cabal/
+  - $HOME/.ghc
+
 install:
-  - cabal update && cabal install Agda
+  - cabal update
+  - cabal install Agda
 
 script:
   - cd src/
