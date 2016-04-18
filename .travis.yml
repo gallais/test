@@ -15,7 +15,7 @@ cache:
   - $HOME/.agda/
 
 install:
-  - export PATH=/$HOME/.cabal/bin:$opt/ghc/7.10.3/bin:/opt/cabal/1.22/bin:$PATH;
+  - export PATH=$HOME/.cabal/bin:/opt/ghc/7.10.3/bin:/opt/cabal/1.22/bin:$PATH;
   - ./install_agda.sh
 
 script:
