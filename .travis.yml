@@ -14,12 +14,8 @@ cache:
   - $HOME/.ghc
 
 install:
-  - export PATH=/opt/ghc/7.10.3/bin:/opt/cabal/1.22/bin:$PATH;
-  - cabal update
-  - cabal install alex
-  - cabal install happy
-  - cabal install Agda
-  - export PATH=$HOME/.cabal/bin:$PATH
+  - export PATH=/$HOME/.cabal/bin:$opt/ghc/7.10.3/bin:/opt/cabal/1.22/bin:$PATH;
+  - ./install_agda.sh
 
 script:
   - cd src/
