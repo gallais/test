@@ -11,7 +11,8 @@ addons:
 
 cache:
   - $HOME/.cabal/
-  - $HOME/.ghc
+  - $HOME/.ghc/
+  - $HOME/.agda/
 
 install:
   - export PATH=/$HOME/.cabal/bin:$opt/ghc/7.10.3/bin:/opt/cabal/1.22/bin:$PATH;
@@ -19,6 +20,4 @@ install:
 
 script:
   - cd src/
-  - wget https://github.com/agda/agda-stdlib/archive/v0.12.tar.gz
-  - tar -xvzf v0.12.tar.gz
-  - agda -i agda-stdlib-0.12/src -i . linear/README.agda
+  - agda linear/README.agda
