@@ -10,9 +10,10 @@ addons:
       - hvr-ghc
 
 cache:
-  - $HOME/.cabal/
-  - $HOME/.ghc/
-  - $HOME/.agda/
+  directories:
+    - $HOME/.cabal/
+    - $HOME/.ghc/
+    - $HOME/.agda/
 
 install:
   - export PATH=$HOME/.cabal/bin:/opt/ghc/7.10.3/bin:/opt/cabal/1.22/bin:$PATH;
