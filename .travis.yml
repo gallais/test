@@ -1,13 +1,24 @@
-language: haskell
-ghc: 7.8
+language: C
 sudo: false
+
+addons:
+  apt:
+    packages:
+      - cabal-install-1.22
+      - ghc-7.10.3
+    sources:
+      - hvr-ghc
+
 cache:
   - $HOME/.cabal/
   - $HOME/.ghc
 
 install:
   - cabal update
+  - cabal install alex
+  - cabal install happy
   - cabal install Agda
+  - export PATH=$HOME/.cabal/bin:$PATH
 
 script:
   - cd src/
